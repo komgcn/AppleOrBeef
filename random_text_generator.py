@@ -1,5 +1,8 @@
 import random
 
+#Generate a .txt file that contains 10,000 lines, made up of random number of words,
+#words are chosen randomly from the list of words
+
 apple_words = ['apple', 'orange','banana','pear','cherry','i','have','eat','like','some','today','school']
 
 beef_words = ['fish', 'beef','lamb','chicken','duck','i','have','eat','like','some','today','school']

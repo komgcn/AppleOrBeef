@@ -4,10 +4,12 @@ from nltk.stem import WordNetLemmatizer
 import numpy as np
 import random
 
+#fixed lexicon with 5 fruits and 5 meats
 lemmatizer = WordNetLemmatizer()
 lexicon = ['fish','apple', 'orange', 'beef','lamb','banana','chicken','pear','cherry','duck']
 test_size = 0.1
 
+#convert a .txt file into list of lexicon and classification
 def handle_sample(sample,classification):
 
     feature_set = []
@@ -28,6 +30,7 @@ def handle_sample(sample,classification):
     print(counter,classification,' feature_set returned')
     return feature_set
 
+#function called by other scripts to return the whole sets of data for neural network training and testing
 def create_sets(apple,beef):
 
     features = []

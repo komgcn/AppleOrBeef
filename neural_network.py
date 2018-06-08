@@ -17,6 +17,7 @@ epochs = 20
 x = tf.placeholder('float',[None, len(lexicon)])
 y = tf.placeholder('float')
 
+#The neural network structure: 2 hidden layers with 500 nodes each
 def neural_network_model(x):
 
     hidden_layer_1 = {'weight':tf.Variable(tf.random_normal([len(lexicon),node_hl1])),
@@ -38,6 +39,7 @@ def neural_network_model(x):
 
     return output
 
+#Train the network for 20 epochs, then run test set to see accuracy, then run user actual input
 def train_neural_network(x, input):
 
     prediction = neural_network_model(x)
