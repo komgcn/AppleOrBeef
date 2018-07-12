@@ -67,18 +67,7 @@ def train_neural_network(x, input):
                 index = lexicon.index(word.lower())
                 features[index] += 1
         print(features)
-        result = sess.run(tf.argmax(prediction.eval(feed_dict={x: [features]}), 0))
-        print(result)
-        if result[0] == 0:
-            print('apple:', input)
-        elif result[0] == 1:
-            print('beef:', input)
-        result = sess.run(tf.argmax(prediction.eval(feed_dict={x: [features]}), 1))
-        print(result)
-        if result[0] == 0:
-            print('apple:', input)
-        elif result[0] == 1:
-            print('beef:', input)
+        print(neural_network_model(np.array(list(features))))
 
 
-train_neural_network(x,'I have eaten beef, lamb and chicken yesterday, also an apple today')
+train_neural_network(x,'I have eaten beef beef, lamb and chicken yesterday, also an apple today')
